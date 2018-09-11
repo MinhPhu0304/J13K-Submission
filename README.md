@@ -1,5 +1,6 @@
 # J13K-Submission
-##Space exploration
+##  Space exploration
+
 This is my submission to J13K competitions
 The game is endless running type but using  only pure Javascript and HTML
 
