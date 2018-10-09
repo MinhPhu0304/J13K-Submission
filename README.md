@@ -13,4 +13,4 @@ The game is endless running type but using  only pure Javascript and HTML
   - I will upload a better version of this game later without any contraints about file size
   - You can modify the game in Game folder source code. The source code in Game folder is readable but not the submission folder
   
-  
+  ![Game play](https://github.com/MinhPhu0304/J13K-Submission/blob/master/Game%20play.PNG)
