@@ -36,7 +36,7 @@ var meteorArray = new Array();
 //Setting up meteors array
 meteorArray.init = function setUpMeteor() {
     for (var i = 0; i < numberMeteor; i++) {
-        meteorArray.push(new Game.spr('assets/meteor.png', meteorSizeInGame.height, meteorSizeInGame.width, 0, 0));
+        meteorArray.push(new Game.spr('./assets/meteor.png', meteorSizeInGame.height, meteorSizeInGame.width, 0, 0));
         meteorArray[i].x = Math.random() * innerWidth;
         meteorArray[i].y = (Math.random() * (innerHeight)) - innerHeight;
         meteorArray[i].size(meteorSizeInGame.height, meteorSizeInGame.width);
@@ -86,10 +86,10 @@ function renderMeteorArray() {
 
                 
                 if (meteorArray[i].movingSpeed >= 4) {
-                    meteorArray[i].change('assets/fire.png', meteorSizeInGame.height, meteorSizeInGame.width, 0, 0);
+                    meteorArray[i].change('./assets/fire.png', meteorSizeInGame.height, meteorSizeInGame.width, 0, 0);
                 }
                 else {
-                    meteorArray[i].change('assets/meteor.png', meteorSizeInGame.height, meteorSizeInGame.width, 0, 0);
+                    meteorArray[i].change('./assets/meteor.png', meteorSizeInGame.height, meteorSizeInGame.width, 0, 0);
                 }
 
                 userScore.addMeteorAvoided();
@@ -112,7 +112,7 @@ function checkHit() {
 
         meteorArray[i].hit(rocket, function () {
 
-            rocket.change('assets/explode.png', 80, 80, 3, 0);
+            rocket.change('./assets/explode.png', 80, 80, 3, 0);
             rocket.size(120, 120);
             rocket.speed(0);                               //Not necessary but I'm too afraid to delete it
 
@@ -144,7 +144,7 @@ function resetGameState() {
 
     rocket.x = Math.random() * (innerWidth - dimensionShip.WIDTH);                      //Reset rocket position into new random position 
     rocket.y = innerHeight - dimensionShip.WIDTH;
-    rocket.change('assets/ship2.png', dimensionShip.HEIGHT, dimensionShip.WIDTH, 0, 0);    //The rocket already explode LOL, so  we have to change the picture again
+    rocket.change('./assets/ship2.png', dimensionShip.HEIGHT, dimensionShip.WIDTH, 0, 0);    //The rocket already explode LOL, so  we have to change the picture again
 
     for (var i = 0; i < numberMeteor; i++) {
         meteorArray[i].x = Math.random() * innerWidth;
